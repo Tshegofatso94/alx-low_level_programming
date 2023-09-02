@@ -1,18 +1,14 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
- * _pow_recursion - raises x to the power of y
- * @x: Number Integer
- * @y: Power
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _pow_recursion(int x, int y)
+* _putchar - writes the character c to stdout
+* @c: The character to print
+*
+* Return: On success 1.
+* On error, -1 is returned, and errno is set appropriately.
+*/
+int _putchar(char c)
 {
-	if (y < 0)
-		return (-1);
-	if (y == 0)
-		return (1);
-	return (x * _pow_recursion(x, y - 1));
-
+return (write(1, &c, 1));
+}
